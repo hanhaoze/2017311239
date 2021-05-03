@@ -17,7 +17,7 @@
         <!-- 内容主体区域 -->
         <div style="padding: 15px;">
             <span class="layui-breadcrumb">
-                <a>学生端</a>
+                <a>操作员</a>
                 <a><cite>公告列表</cite></a>
             </span>
             <p> &nbsp;</p>

@@ -42,7 +42,7 @@
                     <a class="" href="javascript:;">个人信息管理</a>
                     <dl class="layui-nav-child">
                         <dd><a href="${pageContext.request.contextPath}/leaderInfomationServlet">个人信息</a></dd>
-                        <dd><a href="${pageContext.request.contextPath}/teacherPasswordIndexServlet">修改密码</a></dd>
+                        <dd><a href="${pageContext.request.contextPath}/leaderPasswordIndexServlet">修改密码</a></dd>
                         <dd><a href="${pageContext.request.contextPath}/fileListServlet">文件列表</a></dd>
                     </dl>
                 </li>

@@ -16,4 +16,9 @@ public interface LeaderService {
     void updateInfo(Leader leader);
 
     Leader findLeaderById(Leader leader);
+
+    void updatePassword(String leaderid, String newpassword);
+
+    void addLeaderAllInfo(Leader updateLeader);
+
 }

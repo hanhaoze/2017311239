@@ -68,4 +68,24 @@ public class LeaderDaoImpl implements LeaderDao {
             return null;
         }
     }
+
+    @Override
+    public void updatePassword(String leaderid, String newpassword) {
+        try {
+            String sql = "update leader set t_password=? where t_id=?";
+            template.update(sql,newpassword,leaderid);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public void addLeaderAllInfo(Leader t) {
+        try {
+            String sql = "insert into leader(t_id,t_name,t_sex,t_postion,t_email) values(?,?,?,?,?)";
+            template.update(sql,t.getT_id(),t.getT_name(),t.getT_sex(),t.getT_postion(),t.getT_email());
+        } catch (DataAccessException e) {
+            e.printStackTrace();
+        }
+    }
 }

@@ -6,15 +6,19 @@ import domain.Line;
 import java.util.List;
 
 public interface LeaderDao {
-        Leader findLeaderidAndPassword(String id, String password);
+    Leader findLeaderidAndPassword(String id, String password);
 
-         List<Leader> findAll();
+    List<Leader> findAll();
 
-         List<Line> findMySelfOptionalLine(String t_id);
+    List<Line> findMySelfOptionalLine(String t_id);
 
-         void updateInfo(Leader leader);
+    void updateInfo(Leader leader);
 
-         Leader findLeaderById(String t_id);
+    Leader findLeaderById(String t_id);
+
+    void updatePassword(String leaderid, String newpassword);
+
+    void addLeaderAllInfo(Leader updateLeader);
 
 
 }

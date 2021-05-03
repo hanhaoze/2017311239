@@ -47,7 +47,7 @@ public class FindOperatorByPageServlet extends HttpServlet {
         if (operator != null && admin == null && leader == null) {
             request.getRequestDispatcher("/WEB-INF/operator/oFindOperatorList.jsp").forward(request, response);
         } else if (admin != null && operator == null && leader == null) {
-            request.getRequestDispatcher("/WEB-INF/admin/aFindStudentList.jsp").forward(request, response);
+            request.getRequestDispatcher("/WEB-INF/admin/aFindOperatorList.jsp").forward(request, response);
         } else if (leader != null && admin == null && operator == null) {
             request.getRequestDispatcher("/WEB-INF/leader/lFindOperatorList.jsp").forward(request, response);
         } else {

@@ -46,51 +46,51 @@
                 <div class="layui-card-body">
                     <ul class="layui-row layui-col-space10 layui-this">
                         <li class="layui-col-xs3">
-                            <a lay-href="/mavenTemplate/student/query">
-                                <i class="layui-icon layui-icon-survey"></i>
-                                <cite>学生信息查询</cite>
-                            </a>
-                        </li>
-                        <li class="layui-col-xs3">
-                            <a lay-href="/mavenTemplate/teacher/query">
-                                <i class="layui-icon layui-icon-survey"></i>
-                                <cite>教师信息查询</cite>
-                            </a>
-                        </li>
-                        <li class="layui-col-xs3">
                             <a href="${pageContext.request.contextPath}/leaderOptionaLineServlet">
                                 <i class="layui-icon layui-icon-survey"></i>
-                                <cite>班级信息查询</cite>
+                                <cite>我的线体</cite>
                             </a>
                         </li>
                         <li class="layui-col-xs3">
-                            <a lay-href="/mavenTemplate/major/query">
+                            <a href="${pageContext.request.contextPath}/addSelectLineServlet">
                                 <i class="layui-icon layui-icon-survey"></i>
-                                <cite>专业&amp;学院信息查询</cite>
+                                <cite>添加线体</cite>
                             </a>
                         </li>
                         <li class="layui-col-xs3">
-                            <a lay-href="/mavenTemplate/user/info">
+                            <a href="${pageContext.request.contextPath}/findOperatorByPageServlet">
+                                <i class="layui-icon layui-icon-survey"></i>
+                                <cite>操作员信息查询</cite>
+                            </a>
+                        </li>
+                        <li class="layui-col-xs3">
+                            <a href="${pageContext.request.contextPath}/leaderListServlet">
+                                <i class="layui-icon layui-icon-survey"></i>
+                                <cite>督导信息查询</cite>
+                            </a>
+                        </li>
+                        <li class="layui-col-xs3">
+                            <a href="${pageContext.request.contextPath}/findProductByPageServlet">
                                 <i class="layui-icon layui-icon-user"></i>
-                                <cite>个人资料</cite>
+                                <cite>产品信息查询</cite>
                             </a>
                         </li>
                         <li class="layui-col-xs3">
-                            <a lay-href="/mavenTemplate/user/password">
+                            <a href="${pageContext.request.contextPath}/leaderInfomationServlet">
+                                <i class="layui-icon layui-icon-set"></i>
+                                <cite>个人信息</cite>
+                            </a>
+                        </li>
+                        <li class="layui-col-xs3">
+                            <a href="${pageContext.request.contextPath}/leaderPasswordIndexServlet">
                                 <i class="layui-icon layui-icon-set"></i>
                                 <cite>修改密码</cite>
                             </a>
                         </li>
                         <li class="layui-col-xs3">
-                            <a lay-href="/mavenTemplate/user/email">
-                                <i class="layui-icon layui-icon-set"></i>
-                                <cite>修改邮箱</cite>
-                            </a>
-                        </li>
-                        <li class="layui-col-xs3">
-                            <a lay-href="/mavenTemplate/student/modify">
+                            <a href="${pageContext.request.contextPath}/leaderOptionaLineServlet">
                                 <i class="layui-icon layui-icon-survey"></i>
-                                <cite>学生信息修改</cite>
+                                <cite>文件列表</cite>
                             </a>
                         </li>
                     </ul>

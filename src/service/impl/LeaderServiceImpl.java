@@ -35,5 +35,15 @@ public class LeaderServiceImpl implements LeaderService {
     public List<Line> findMySelfOptionalLine(String T_id) {
         return dao.findMySelfOptionalLine(T_id);
     }
+
+    @Override
+    public void updatePassword(String leaderid, String newpassword) {
+        dao.updatePassword(leaderid,newpassword);
+    }
+
+    @Override
+    public void addLeaderAllInfo(Leader updateLeader) {dao.addLeaderAllInfo(updateLeader);
+
+    }
 }
 

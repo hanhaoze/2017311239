@@ -43,7 +43,7 @@
                         <td>${optionalline.c_info}</td>
                         <td>${optionalline.t_id}</td>
                         <td>${optionalline.t_name}</td>
-                        <td><a class="layui-btn layui-btn-normal" href="${pageContext.request.contextPath}/doSelectCourseServlet?id=${optionalline.c_id}">选择</a></td>
+                        <td><a class="layui-btn layui-btn-normal" href="${pageContext.request.contextPath}/doSelectLineServlet?id=${optionalline.c_id}">选择</a></td>
                     </tr>
                 </c:forEach>
             </table>

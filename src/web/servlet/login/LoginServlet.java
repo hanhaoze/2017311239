@@ -111,8 +111,8 @@ public class LoginServlet extends HttpServlet {
             if (loginAdmin != null) {
                 session.setAttribute("admin", loginAdmin);
                 session.setAttribute("html_title", "管理员");
-//                request.getRequestDispatcher("/WEB-INF/admin/aIndex.jsp").forward(request,response);
-                response.sendRedirect("adminIndexServlet");
+               request.getRequestDispatcher("/WEB-INF/admin/aIndex.jsp").forward(request,response);
+                //response.sendRedirect("adminIndexServlet");
             }else {
                 //登录失败 提示信息
                 request.setAttribute("login_msg", "用户名或密码错误！");

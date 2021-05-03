@@ -10,7 +10,7 @@
 %>
 <jsp:forward page = "/WEB-INF/operator/oIndex.jsp"/>
 <%
-}else if (session.getAttribute("teacher")!=null) {
+}else if (session.getAttribute("leader")!=null) {
 %>
 <jsp:forward page = "/WEB-INF/leader/lIndex.jsp"/>
 <%

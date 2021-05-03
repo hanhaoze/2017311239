@@ -1,9 +1,6 @@
 package service;
 
-import domain.Line;
-import domain.Operator;
-import domain.PageBean;
-import domain.ProductInfo;
+import domain.*;
 
 import java.util.List;
 import java.util.Map;
@@ -24,6 +21,22 @@ public interface OperatorService {
     Operator findOperatorById(Operator operator);
 
     void register(Operator operator);
+
+    List<SelectLine> findAllSelectLine(String operatorid);
+
+    List<SelectLine> findSelectLineAllOperator();
+
+    void addSelectLine(String operatorid, String lineid);
+
+    void deleteSelectOperator(String[] sids);
+
+    void deleteOperatorById(String operatorid);
+
+    void addOperatorAllInfo(Operator updateOperator);
+
+
+
+
 
 
 }

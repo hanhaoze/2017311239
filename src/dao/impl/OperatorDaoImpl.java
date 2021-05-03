@@ -4,6 +4,7 @@ import dao.OperatorDao;
 import domain.Line;
 import domain.Operator;
 import domain.ProductInfo;
+import domain.SelectLine;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -62,7 +63,7 @@ public class OperatorDaoImpl implements OperatorDao {
             //判断value是否有值
             if (value != null && !"".equals(value)) {
                 //有值
-                sb.append(" and "+key+" like ? ");
+                sb.append(" and "+ key +" like ? ");
                 params.add("%"+value+"%");//?条件的值
             }
         }
@@ -218,5 +219,69 @@ public class OperatorDaoImpl implements OperatorDao {
             e.printStackTrace();
         }
 
+    }
+
+    @Override
+    public List<SelectLine> findAllSelectLine(String operatorid) {
+        try {
+            String sql = "select operator.s_id,operator.s_name,line.c_id,line.c_name,line.c_info,line.t_id,t_name,select_line.score\n" +
+                    "from select_line,operator,line,leader\n" +
+                    "where operator.s_id=select_line.s_id\n" +
+                    "and select_line.c_id=line.c_id\n" +
+                    "and line.t_id=leader.t_id\n" +
+                    "and operator.s_id=?";
+            List<SelectLine> scs = template.query(sql, new BeanPropertyRowMapper<SelectLine>(SelectLine.class),operatorid);
+            return scs;
+        } catch (DataAccessException e) {
+            e.printStackTrace();
+            return null;
+        }
+
+    }
+
+    @Override
+    public List<SelectLine> findSelectLineAllOperator() {
+        try {
+            String sql = "select operator.s_id,operator.s_name,line.c_id,line.c_name,line.c_info,leader.t_id,t_name,select_line.score\n" +
+                    "from select_line,operator,line,leader\n" +
+                    "where operator.s_id=select_line.s_id\n" +
+                    "and select_line.c_id=line.c_id\n" +
+                    "and line.t_id=leader.t_id\n";
+            List<SelectLine> scs = template.query(sql, new BeanPropertyRowMapper<SelectLine>(SelectLine.class));
+            return scs;
+        } catch (DataAccessException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    @Override
+    public void addSelectLine(String operatorid, String lineid) {
+        try {
+            String sql = "insert into select_line(s_id,c_id) values(?,?)";
+            template.update(sql,operatorid,lineid);
+        } catch (DataAccessException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public void deleteOperatorById(String operatorid) {
+        try {
+            String sql = "delete from operator where s_id=?";
+            template.update(sql,operatorid);
+        } catch (DataAccessException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public void addOperatorAllInfo(Operator s) {
+        try {
+            String sql = "insert into operator(s_id,s_name,s_sex,s_age,s_phone,s_email,s_address) values(?,?,?,?,?,?,?)";
+            template.update(sql,s.getS_id(),s.getS_name(),s.getS_sex(),s.getS_age(),s.getS_phone(),s.getS_email(),s.getS_address());
+        } catch (DataAccessException e) {
+            e.printStackTrace();
+        }
     }
 }

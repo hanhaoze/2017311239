@@ -30,7 +30,7 @@ public class OperatorOptionalLineServlet extends HttpServlet {
         if (operator != null && admin == null) {
             request.getRequestDispatcher("/WEB-INF/operator/operatorOptionalLine.jsp").forward(request,response);
         } else if (admin != null && operator == null) {
-            request.getRequestDispatcher("/WEB-INF/admin/allStudentOptionalLine.jsp").forward(request, response);
+            request.getRequestDispatcher("/WEB-INF/admin/allOperatorOptionalLine.jsp").forward(request, response);
         } else {
             request.getRequestDispatcher("error.jsp").forward(request, response);
         }

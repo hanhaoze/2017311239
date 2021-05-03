@@ -18,7 +18,7 @@ import java.util.List;
 @WebServlet("/leaderListServlet")
 public class LeaderListServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        //调用TeacherService完成查询
+        //调用LeaderService完成查询
         LeaderService leaderService = new LeaderServiceImpl();
         List<Leader> leaders = leaderService.findAll();
         //将list存入request域
@@ -32,7 +32,7 @@ public class LeaderListServlet extends HttpServlet {
         if (operator != null && admin == null && leader == null) {
             request.getRequestDispatcher("/WEB-INF/operator/oFindLeaderList.jsp").forward(request, response);
         } else if (admin != null && operator == null && leader == null) {
-            request.getRequestDispatcher("/WEB-INF/admin/aFindTeacherList.jsp").forward(request, response);
+            request.getRequestDispatcher("/WEB-INF/admin/aFindLeaderList.jsp").forward(request, response);
         } else if (leader != null && admin == null && operator == null) {
             request.getRequestDispatcher("/WEB-INF/leader/lFindLeaderList.jsp").forward(request, response);
         } else {

@@ -3,6 +3,7 @@ package dao;
 import domain.Line;
 import domain.Operator;
 import domain.ProductInfo;
+import domain.SelectLine;
 
 import java.util.List;
 import java.util.Map;
@@ -27,5 +28,18 @@ public interface OperatorDao {
     Operator findOperatorById(String s_id);
 
     void addOperator(Operator operator);
+
+    List<SelectLine> findAllSelectLine(String operatorid);
+
+    List<SelectLine> findSelectLineAllOperator();
+
+    void addSelectLine(String operatorid, String lineid);
+
+    void deleteOperatorById(String operatorid);
+
+    void addOperatorAllInfo(Operator updateOperator);
+
+
+
 
 }

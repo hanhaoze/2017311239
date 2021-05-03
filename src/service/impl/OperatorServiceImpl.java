@@ -2,10 +2,7 @@ package service.impl;
 
 import dao.OperatorDao;
 import dao.impl.OperatorDaoImpl;
-import domain.Line;
-import domain.Operator;
-import domain.PageBean;
-import domain.ProductInfo;
+import domain.*;
 import service.OperatorService;
 
 import java.util.List;
@@ -97,6 +94,41 @@ public class OperatorServiceImpl implements OperatorService {
     @Override
     public void register(Operator operator) {
         dao.addOperator(operator);
+    }
+
+    @Override
+    public List<SelectLine> findAllSelectLine(String operatorid) {
+        return dao.findAllSelectLine(operatorid);
+    }
+
+    @Override
+    public List<SelectLine> findSelectLineAllOperator() {
+        return dao.findSelectLineAllOperator();
+
+    }
+
+    @Override
+    public void addSelectLine(String operatorid, String lineid) {
+        dao.addSelectLine(operatorid,lineid);
+    }
+
+    @Override
+    public void deleteSelectOperator(String[] sids) {
+        if (sids != null && sids.length > 0) {
+            for (String sid: sids) {
+                dao.deleteOperatorById(sid);
+            }
+        }
+    }
+
+    @Override
+    public void deleteOperatorById(String operatorid) {
+        dao.deleteOperatorById(operatorid);
+    }
+
+    @Override
+    public void addOperatorAllInfo(Operator updateOperator) {
+        dao.addOperatorAllInfo(updateOperator);
     }
 }
 

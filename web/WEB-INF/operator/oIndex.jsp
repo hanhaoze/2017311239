@@ -46,7 +46,7 @@
                 <div class="layui-card-body">
                     <ul class="layui-row layui-col-space10 layui-this">
                         <li class="layui-col-xs3">
-                            <a href="${pageContext.request.contextPath}/studentSelectCourseListServlet">
+                            <a href="${pageContext.request.contextPath}/operatorSelectLineListServlet">
                                 <i class="layui-icon layui-icon-survey"></i>
                                 <cite>已选线体</cite>
                             </a>
@@ -54,7 +54,7 @@
                         <li class="layui-col-xs3">
                             <a href="${pageContext.request.contextPath}/operatorOptionalLineServlet">
                                 <i class="layui-icon layui-icon-survey"></i>
-                                <cite>线体工作流</cite>
+                                <cite>可选线体</cite>
                             </a>
                         </li>
                         <li class="layui-col-xs3">

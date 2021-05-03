@@ -14,7 +14,7 @@
                 <li class="layui-nav-item">
                     <a class="" href="javascript:;">工作流</a>
                     <dl class="layui-nav-child">
-                        <dd><a href="${pageContext.request.contextPath}/studentSelectCourseListServlet">选择工作点</a></dd>
+                        <dd><a href="${pageContext.request.contextPath}/operatorSelectLineListServlet">选择工作点</a></dd>
                         <dd><a href="${pageContext.request.contextPath}/operatorOptionalLineServlet">可选线体</a></dd>
                     </dl>
                 </li>

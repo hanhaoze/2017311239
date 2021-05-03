@@ -20,7 +20,7 @@
                 <a class="layui-icon layui-icon-link" href="javascript:;"> 其它</a>
                 <dl class="layui-nav-child">
                     <dd><a href="#">小吐槽</a></dd>
-                    <dd><a href="${pageContext.request.contextPath}/notifyListToServlet">学校公告</a></dd>
+                    <dd><a href="${pageContext.request.contextPath}/notifyListToServlet">产线公告</a></dd>
                 </dl>
             </li>
         </ul>
